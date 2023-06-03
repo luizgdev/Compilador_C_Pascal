@@ -1,0 +1,3 @@
+/home/luiz/CLionProjects/C_Pascal_Compiler/cmake-build-debug/CMakeFiles/analisadorLexico.dir
+/home/luiz/CLionProjects/C_Pascal_Compiler/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/luiz/CLionProjects/C_Pascal_Compiler/cmake-build-debug/CMakeFiles/rebuild_cache.dir
