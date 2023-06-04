@@ -1,13 +1,17 @@
-
-#include "lexer/lexer.h"
+#include "lexer/lexer.h" // Inclui o analisador léxico
+#include "utils/hash_table/hash.h" // Inclui a tabela hash
 
 int main() {
     FILE *file;
     char filename[100];
     char token[100];
+    clear_token(token);
     int token_type;
 
-    strcpy(filename, "/home/luiz/CLionProjects/C_Pascal_Compiler/teste.pas");
+    // Cria a tabela hash
+    HashTable *hashTable = createHashTable();
+
+    strcpy(filename, "/home/luiz/CLionProjects/C_Pascal_Compiler/tests/test_lexer.pas");
 
     // Abre o arquivo em modo de leitura
     file = fopen(filename, "r");
@@ -17,7 +21,7 @@ int main() {
     }
 
     // Lê e imprime os tokens encontrados no arquivo
-    while ((token_type = get_token(file, token)) != 0) {
+    while ((token_type = get_token(file, token)) != 1) {
         switch (token_type) {
             case 2:
                 printf("Palavra-chave: %s\n", token);
@@ -40,11 +44,18 @@ int main() {
             default:
                 break;
         }
+        insertToken(hashTable, token, token_type);
         clear_token(token);
     }
 
     // Fecha o arquivo
     fclose(file);
+
+    // Imprime a tabela
+    printHashTable(hashTable);
+
+    // Libera a mem�ria utilizada pela tabela hash
+    freeHashTable(hashTable);
 
     return 0;
 }
