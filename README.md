@@ -35,7 +35,7 @@ Contribuições são bem-vindas! Se você deseja contribuir para este projeto, s
 
 ## Licença
 
-Este projeto está licenciado sob a [GNU General Public License v3.0]. Veja o arquivo `LICENSE` para mais detalhes.
+Este projeto está licenciado sob a [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html). Veja o arquivo [LICENSE](https://github.com/luizgdev/Compilador_C_Pascal/blob/main/LICENSE) para mais detalhes.
 
 ## Contato
 
