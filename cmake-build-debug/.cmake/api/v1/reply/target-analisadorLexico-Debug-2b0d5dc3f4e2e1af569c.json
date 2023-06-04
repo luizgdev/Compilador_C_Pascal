@@ -53,7 +53,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				2
+				2,
+				4
 			]
 		}
 	],
@@ -87,7 +88,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				2
+				2,
+				4
 			]
 		},
 		{
@@ -101,7 +103,8 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				3
+				3,
+				5
 			]
 		}
 	],
@@ -115,7 +118,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "teste.pas",
+			"path" : "tests/test_lexer.pas",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -127,6 +130,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "lexer/lexer.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "utils/hash_table/hash.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "utils/hash_table/hash.h",
 			"sourceGroupIndex" : 2
 		}
 	],

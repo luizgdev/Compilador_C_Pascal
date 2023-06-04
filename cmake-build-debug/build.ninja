@@ -61,6 +61,12 @@ build CMakeFiles/analisadorLexico.dir/lexer/lexer.c.o: C_COMPILER__analisadorLex
   OBJECT_DIR = CMakeFiles/analisadorLexico.dir
   OBJECT_FILE_DIR = CMakeFiles/analisadorLexico.dir/lexer
 
+build CMakeFiles/analisadorLexico.dir/utils/hash_table/hash.c.o: C_COMPILER__analisadorLexico_Debug /home/luiz/CLionProjects/C_Pascal_Compiler/utils/hash_table/hash.c || cmake_object_order_depends_target_analisadorLexico
+  DEP_FILE = CMakeFiles/analisadorLexico.dir/utils/hash_table/hash.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/analisadorLexico.dir
+  OBJECT_FILE_DIR = CMakeFiles/analisadorLexico.dir/utils/hash_table
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target analisadorLexico
@@ -69,7 +75,7 @@ build CMakeFiles/analisadorLexico.dir/lexer/lexer.c.o: C_COMPILER__analisadorLex
 #############################################
 # Link the executable analisadorLexico
 
-build analisadorLexico: C_EXECUTABLE_LINKER__analisadorLexico_Debug CMakeFiles/analisadorLexico.dir/main.c.o CMakeFiles/analisadorLexico.dir/lexer/lexer.c.o
+build analisadorLexico: C_EXECUTABLE_LINKER__analisadorLexico_Debug CMakeFiles/analisadorLexico.dir/main.c.o CMakeFiles/analisadorLexico.dir/lexer/lexer.c.o CMakeFiles/analisadorLexico.dir/utils/hash_table/hash.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/analisadorLexico.dir
   POST_BUILD = :
