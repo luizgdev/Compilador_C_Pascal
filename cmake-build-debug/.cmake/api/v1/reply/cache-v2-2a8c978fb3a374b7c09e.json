@@ -715,7 +715,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "analisadorLexico"
+			"value" : "C_Pascal_Compiler"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -996,6 +996,42 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
+		},
+		{
+			"name" : "C_Pascal_Compiler_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/luiz/CLionProjects/C_Pascal_Compiler/cmake-build-debug"
+		},
+		{
+			"name" : "C_Pascal_Compiler_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "C_Pascal_Compiler_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/luiz/CLionProjects/C_Pascal_Compiler"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

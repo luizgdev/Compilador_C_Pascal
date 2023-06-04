@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "analisadorLexico",
+					"name" : "C_Pascal_Compiler",
 					"targetIndexes" : 
 					[
 						0
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "analisadorLexico::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-analisadorLexico-Debug-01806df15330253ce728.json",
+					"jsonFile" : "target-analisadorLexico-Debug-db49d26ec8a25160f0ba.json",
 					"name" : "analisadorLexico",
 					"projectIndex" : 0
 				}

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
-project(analisadorLexico C)
+project(C_Pascal_Compiler C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(analisadorLexico main.c teste.pas)
+add_executable(analisadorLexico main.c teste.pas lexer/lexer.c lexer/lexer.h)
