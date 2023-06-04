@@ -1,7 +1,3 @@
-//
-// Created by luiz on 04/06/23.
-//
-
 #ifndef C_PASCAL_COMPILER_LEXER_H
 #define C_PASCAL_COMPILER_LEXER_H
 #include <stdio.h>

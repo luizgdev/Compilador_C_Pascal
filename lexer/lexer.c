@@ -1,7 +1,3 @@
-//
-// Created by luiz on 04/06/23.
-//
-
 #include "lexer.h"
 
 // Função que verifica se um caractere é um espaço em branco
