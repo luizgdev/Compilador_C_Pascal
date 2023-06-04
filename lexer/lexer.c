@@ -151,7 +151,7 @@ int get_token(FILE *file, char *token) {
 
 // Verifica se chegou no final do arquivo
     if (is_eof(file)) {
-        token_type = 0;  // Final do arquivo
+        token_type = 1;  // Final do arquivo
     }
 
 // Retorna o tipo de token encontrado
@@ -160,9 +160,5 @@ int get_token(FILE *file, char *token) {
 
 // Limpa restos de string no token
 void clear_token(char *token) {
-    int i = 0;
-    while (token[i + 1] != '\0') {
-        token[i] = '\0';
-        i++;
-    }
+    memset(token, '\0', 100);
 }
