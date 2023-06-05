@@ -1,5 +1,6 @@
 #include "lexer/lexer.h" // Inclui o analisador léxico
 #include "utils/hash_table/hash.h" // Inclui a tabela hash
+//#include "parser/parser.h" // Inclui o analisador sintático
 
 int main() {
     FILE *file;
@@ -52,9 +53,21 @@ int main() {
     fclose(file);
 
     // Imprime a tabela
+    printf("\nTABELA HASH\n");
     printHashTable(hashTable);
 
-    // Libera a mem�ria utilizada pela tabela hash
+//    // Obtém o primeiro token
+//    currentToken = getNextToken();
+//
+//    // Chama a função de análise sintática para o programa
+//    program();
+//
+//    // Verifica se chegou ao final do arquivo
+//    match(TOK_EOF);
+//
+//    printf("Análise sintática concluída com sucesso!\n");
+
+    // Libera a memória utilizada pela tabela hash
     freeHashTable(hashTable);
 
     return 0;
