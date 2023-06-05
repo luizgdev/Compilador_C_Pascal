@@ -4,7 +4,7 @@ unsigned long hash(const char *str) {
     unsigned long hash = 5381;
     int c;
 
-    while ((c = *str++)) {
+    while ((c = *(str++))) {
         hash = ((hash << 5) + hash) + c; // djb2 hash function
     }
 
@@ -74,14 +74,19 @@ HashEntry *findToken(HashTable *hashTable, const char *token) {
     return NULL;
 }
 
-void printHashTable(HashTable* hashTable) {
+void printHashTable(HashTable *hashTable) {
     for (int i = 0; i < HASH_SIZE; i++) {
-        HashEntry *current = hashTable->table[i];
-        printf("[%d]: ", i);
-        if (current != NULL) {
-            printf("(%s, %d)", current->token, current->token_type);
+        printf("Slot %d:", i);
+        if (hashTable->table[i] == NULL) {
+            printf(" Vazio\n");
+        } else {
+            HashEntry *current = hashTable->table[i];
+            while (current != NULL) {
+                printf(" <%s, %d>", current->token, current->token_type);
+                current = current->next;
+            }
+            printf("\n");
         }
-        printf("\n");
     }
 }
 
