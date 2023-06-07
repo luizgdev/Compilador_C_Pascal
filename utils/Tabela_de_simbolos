@@ -1,0 +1,53 @@
+| Símbolo | Descrição                                       | Tipo           |
+|---------|-------------------------------------------------|----------------|
+| PROGRAM | Declara o início de um programa                  | Palavra-chave  |
+| VAR     | Declaração de variáveis                          | Palavra-chave  |
+| INTEGER | Tipo de dado inteiro                             | Palavra-chave  |
+| REAL    | Tipo de dado real                                | Palavra-chave  |
+| BOOLEAN | Tipo de dado booleano                            | Palavra-chave  |
+| CHAR    | Tipo de dado caractere                           | Palavra-chave  |
+| ARRAY   | Declaração de um array                           | Palavra-chave  |
+| OF      | Define o tipo de elementos em um array           | Palavra-chave  |
+| FUNCTION| Declaração de uma função                         | Palavra-chave  |
+| PROCEDURE| Declaração de um procedimento                   | Palavra-chave  |
+| BEGIN   | Início do bloco de código                        | Palavra-chave  |
+| END     | Fim do bloco de código                           | Palavra-chave  |
+| IF      | Início de uma estrutura condicional (se)         | Palavra-chave  |
+| THEN    | Início do bloco de código condicional (se)       | Palavra-chave  |
+| ELSE    | Bloco alternativo condicional (senão)            | Palavra-chave  |
+| WHILE   | Início de um loop (enquanto)                     | Palavra-chave  |
+| DO      | Início do bloco de código do loop                | Palavra-chave  |
+| REPEAT  | Início de um loop repetir-até                    | Palavra-chave  |
+| UNTIL   | Condição de saída do loop repetir-até            | Palavra-chave  |
+| FOR     | Início de um loop for                            | Palavra-chave  |
+| TO      | Condição de saída do loop for                    | Palavra-chave  |
+| DOWNTO  | Condição de saída do loop for em ordem decrescente| Palavra-chave  |
+| READ    | Leitura de entrada                               | Palavra-chave  |
+| WRITE   | Saída de dados                                   | Palavra-chave  |
+| TRUE    | Valor booleano verdadeiro                         | Literal        |
+| FALSE   | Valor booleano falso                             | Literal        |
+| AND     | Operador lógico E                                | Operador       |
+| OR      | Operador lógico OU                               | Operador       |
+| NOT     | Operador lógico NÃO                              | Operador       |
+| MOD     | Operador de módulo (resto da divisão)            | Operador       |
+| DIV     | Operador de divisão inteira                      | Operador       |
+| +       | Operador de adição                               | Operador       |
+| -       | Operador de subtração                            | Operador       |
+| *       | Operador de multiplicação                        | Operador       |
+| /       | Operador de divisão                              | Operador       |
+| =       | Operador de igualdade                            | Operador       |
+| <>      | Operador de diferença                            | Operador       |
+| <       | Operador de menor que                            | Operador       |
+| <=      | Operador de menor ou igual que                   | Operador       |
+| >       | Operador de maior que                            | Operador       |
+| >=      | Operador de maior ou igual que                   | Operador       |
+| :=      | Operador de atribuição                           | Operador       |
+| ;       | Separador de comandos                            | Separador      |
+| ,       | Separador de elementos                           | Separador      |
+| (       | Início de comentário em linha                    | Delimitador    |
+| )       | Fim de comentário em linha                       | Delimitador    |
+| {       | Início de comentário em bloco                    | Delimitador    |
+| }       | Fim de comentário em bloco                       | Delimitador    |
+| [       | Início de índice de array                        | Delimitador    |
+| ]       | Fim de índice de array                           | Delimitador    |
+| ^       | Operador de ponteiro                             | Operador
