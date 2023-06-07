@@ -15,6 +15,7 @@ typedef enum {
     TOK_OP_DIV,
     TOK_LPAREN,
     TOK_RPAREN,
+    TOKEN_ASSIGN,
     TOK_SEMICOLON,
     TOK_EOF
 } TokenType;

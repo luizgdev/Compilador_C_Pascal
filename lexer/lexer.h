@@ -1,5 +1,6 @@
 #ifndef C_PASCAL_COMPILER_LEXER_H
 #define C_PASCAL_COMPILER_LEXER_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,6 +16,10 @@ int is_literal(char);
 int is_keyword(char *);
 
 int is_operator(char);
+
+int is_punctuation(char);
+
+int is_logic_operator(char *);
 
 int get_token(FILE *, char *);
 

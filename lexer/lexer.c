@@ -24,9 +24,14 @@ int is_literal(char c) {
 int is_keyword(char *token) {
     return !strcmp(token, "program") ||
            !strcmp(token, "var") ||
-           !strcmp(token, "div") ||
-           !strcmp(token, "writeln") ||
-           !strcmp(token, "not") ||
+           !strcmp(token, "integer") ||
+           !strcmp(token, "real") ||
+           !strcmp(token, "boolean") ||
+           !strcmp(token, "char") ||
+           !strcmp(token, "array") ||
+           !strcmp(token, "of") ||
+           !strcmp(token, "function") ||
+           !strcmp(token, "procedure") ||
            !strcmp(token, "begin") ||
            !strcmp(token, "end") ||
            !strcmp(token, "if") ||
@@ -39,21 +44,38 @@ int is_keyword(char *token) {
            !strcmp(token, "for") ||
            !strcmp(token, "to") ||
            !strcmp(token, "downto") ||
-           !strcmp(token, "function") ||
-           !strcmp(token, "procedure") ||
-           !strcmp(token, "integer") ||
-           !strcmp(token, "real") ||
+           !strcmp(token, "read") ||
+           !strcmp(token, "readln") ||
+           !strcmp(token, "write") ||
+           !strcmp(token, "writeln") ||
            !strcmp(token, "boolean") ||
-           !strcmp(token, "char") ||
-           !strcmp(token, "string");
+           !strcmp(token, "string") ||
+           !strcmp(token, "true") ||
+           !strcmp(token, "false");
 }
 
 // Função que verifica se um caractere é um operador
 int is_operator(char c) {
     return c == '+' || c == '-' || c == '*' || c == '/' ||
-           c == '=' || c == '<' || c == '>' || c == ':' ||
-           c == '.' || c == '[' || c == ']' || c == '^';
+           c == '=' || c == '<' || c == '>' || c == ':';
 }
+
+// Função que verifica se é um símbolo de pontuação
+int is_punctuation(char c) {
+    return c == '.' || c == '[' || c == ']' || c == '^' ||
+           c == '(' || c == ')' || c == ',' || c == ';' ||
+           c == ':';
+}
+
+// Função que verifica se é um operador lógico
+int is_logic_operator(char *token) {
+    return !strcmp(token, "and") ||
+           !strcmp(token, "or") ||
+           !strcmp(token, "not") ||
+           !strcmp(token, "mod") ||
+           !strcmp(token, "div");
+}
+
 // Função que verifica se chegou no final do arquivo
 int is_eof(FILE *file) {
     int current_position = ftell(file);  // Obtém a posição atual do arquivo
@@ -76,7 +98,7 @@ int get_token(FILE *file, char *token) {
 
 // Verifica se é um número
     if (is_digit(c)) {
-        token_type = 5; // número inteiro ou real
+        token_type = 4; // número inteiro ou real
         while (is_digit(c)) {
             token[token_length++] = c;
             c = fgetc(file);
@@ -88,7 +110,7 @@ int get_token(FILE *file, char *token) {
                 token[token_length++] = c;
                 c = fgetc(file);
             }
-            token_type = 5; // número real
+            token_type = 4; // número real
         } else {
             ungetc(c, file);
         }
@@ -111,47 +133,44 @@ int get_token(FILE *file, char *token) {
         ungetc(c, file);
 
         if (is_keyword(token)) {
-            token_type = 2; // palavra-chave
+            token_type = 1; // palavra-chave
+        } else if (is_logic_operator(token)) {
+            token_type = 3;
         } else if (is_literal(token[0])) {
-            int i = 0;
+            int i = 1;
             c = token[i];
             do {
                 token[i++] = c++;
             } while (is_literal(c));
-            token_type = 7; // literal
+            token_type = 6; // literal
         } else {
-            token_type = 3; // identificador
+            token_type = 2; // identificador
         }
     }
 
 // Verifica se é um operador
     else if (is_operator(c)) {
-        token[token_length++] = c;
-        c = fgetc(file);
-        if (c == '=') { // operadores compostos: <=, >=, <>, :=
+        if (c == ':' || c == '<' || c == '>') {
             token[token_length++] = c;
             c = fgetc(file);
-            if (c == '>' || c == '<' || c == '=') {
+            if (c == '=') { // operadores compostos: <=, >=, :=
                 token[token_length++] = c;
-            } else {
-                ungetc(c, file);
             }
         } else {
-            ungetc(c, file);
+            token[token_length++] = c;
         }
-        token_type = 4; // operador
+        token_type = 3; // operador
     }
 
 // Verifica se é um símbolo de pontuação
-    else if (c == ':' || c == '.' || c == ',' || c == ';' ||
-             c == '(' || c == ')' || c == '[' || c == ']' || c == '^') {
+    else if (is_punctuation(c)) {
         token[token_length++] = c;
-        token_type = 6; // símbolo de pontuação
+        token_type = 5; // símbolo de pontuação
     }
 
 // Verifica se chegou no final do arquivo
     if (is_eof(file)) {
-        token_type = 1;  // Final do arquivo
+        token_type = 0;  // Final do arquivo
     }
 
 // Retorna o tipo de token encontrado

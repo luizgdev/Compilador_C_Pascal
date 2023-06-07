@@ -12,7 +12,8 @@ int main() {
     // Cria a tabela hash
     HashTable *hashTable = createHashTable();
 
-    strcpy(filename, "/home/luiz/CLionProjects/C_Pascal_Compiler/tests/test_lexer.pas");
+    // Pega o nome do arquivo
+    strcpy(filename, "/home/luiz/CLionProjects/C_Pascal_Compiler/tests/test_lexer_2.pas");
 
     // Abre o arquivo em modo de leitura
     file = fopen(filename, "r");
@@ -22,24 +23,24 @@ int main() {
     }
 
     // Lê e imprime os tokens encontrados no arquivo
-    while ((token_type = get_token(file, token)) != 1) {
+    while ((token_type = get_token(file, token)) !=0) {
         switch (token_type) {
-            case 2:
+            case 1:
                 printf("Palavra-chave: %s\n", token);
                 break;
-            case 3:
+            case 2:
                 printf("Identificador: %s\n", token);
                 break;
-            case 4:
+            case 3:
                 printf("Operador: %s\n", token);
                 break;
-            case 5:
+            case 4:
                 printf("Número: %s\n", token);
                 break;
-            case 6:
+            case 5:
                 printf("Símbolo de pontuação: %s\n", token);
                 break;
-            case 7:
+            case 6:
                 printf("Literal: %s\n", token);
                 break;
             default:
