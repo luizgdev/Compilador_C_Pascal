@@ -13,6 +13,5 @@ begin
   resultado := numero1 + numero2;
   
   writeln('A soma de ', numero1, ' e ', numero2, ' e igual a ', resultado);
-  
-  readln;
+
 end.
