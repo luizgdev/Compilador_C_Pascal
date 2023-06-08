@@ -1,5 +1,5 @@
 #include "lexer/lexer.h" // Inclui o analisador léxico
-#include "utils/hash_table/hash.h" // Inclui a tabela hash
+#include "utils/symbol_table/symbol_table.h" // Inclui a tabela de símbolos
 //#include "parser/parser.h" // Inclui o analisador sintático
 
 int main() {
@@ -10,7 +10,10 @@ int main() {
     int token_type;
 
     // Cria a tabela hash
-    HashTable *hashTable = createHashTable();
+    //HashTable *hashTable = createHashTable();
+
+    // Cria a tabela de símbolos
+    SymbolTable **sTable = createSymbolTable();
 
     // Pega o nome do arquivo
     strcpy(filename, "/home/luiz/CLionProjects/C_Pascal_Compiler/tests/test_lexer_2.pas");
@@ -46,7 +49,7 @@ int main() {
             default:
                 break;
         }
-        insertToken(hashTable, token, token_type);
+        addSymbol(sTable, token, token_type);
         clear_token(token);
     }
 
@@ -54,8 +57,7 @@ int main() {
     fclose(file);
 
     // Imprime a tabela
-    printf("\nTABELA HASH\n");
-    printHashTable(hashTable);
+    printTable((*sTable)->table);
 
 //    // Obtém o primeiro token
 //    currentToken = getNextToken();
@@ -69,7 +71,7 @@ int main() {
 //    printf("Análise sintática concluída com sucesso!\n");
 
     // Libera a memória utilizada pela tabela hash
-    freeHashTable(hashTable);
+    //freeHashTable(hashTable);
 
     return 0;
 }
