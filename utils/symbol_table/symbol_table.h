@@ -4,23 +4,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "../token_def/token_def.h"
 
-typedef struct SymbolNode {
-    char *token;
-    int token_type;
-    struct SymbolNode *next;
-} Node;
+typedef Token Node;
 
 typedef struct {
-    Node *table;
+    Token *table;
 } SymbolTable;
 
 SymbolTable **createSymbolTable();
 
 void addSymbol(SymbolTable **, char *, int);
 
-void printTable(Node *);
+void printTable(Token *);
 
-void freeTable(Node *);
+void freeTable(Token *);
 
 #endif //C_PASCAL_COMPILER_SYMBOL_TABLE_H
