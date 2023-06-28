@@ -98,7 +98,7 @@ int get_token(FILE *file, char *token) {
 
 // Verifica se é um número
     if (is_digit(c)) {
-        token_type = 4; // número inteiro ou real
+        token_type = TOK_NUM; // número inteiro ou real
         while (is_digit(c)) {
             token[token_length++] = c;
             c = fgetc(file);
@@ -110,7 +110,7 @@ int get_token(FILE *file, char *token) {
                 token[token_length++] = c;
                 c = fgetc(file);
             }
-            token_type = 4; // número real
+            token_type = TOK_NUM; // número real
         } else {
             ungetc(c, file);
         }
@@ -133,18 +133,18 @@ int get_token(FILE *file, char *token) {
         ungetc(c, file);
 
         if (is_keyword(token)) {
-            token_type = 1; // palavra-chave
+            token_type = TOK_KEYWORD; // palavra-chave
         } else if (is_logic_operator(token)) {
-            token_type = 3;
+            token_type = TOK_OP;
         } else if (is_literal(token[0])) {
             int i = 1;
             c = token[i];
             do {
                 token[i++] = c++;
             } while (is_literal(c));
-            token_type = 6; // literal
+            token_type = TOK_LITERAL; // literal
         } else {
-            token_type = 2; // identificador
+            token_type = TOK_IDENTIFIER; // identificador
         }
     }
 
@@ -159,18 +159,18 @@ int get_token(FILE *file, char *token) {
         } else {
             token[token_length++] = c;
         }
-        token_type = 3; // operador
+        token_type = TOK_OP; // operador
     }
 
 // Verifica se é um símbolo de pontuação
     else if (is_punctuation(c)) {
         token[token_length++] = c;
-        token_type = 5; // símbolo de pontuação
+        token_type = TOK_PONT; // símbolo de pontuação
     }
 
 // Verifica se chegou no final do arquivo
     if (is_eof(file)) {
-        token_type = 0;  // Final do arquivo
+        token_type = TOK_EOF;  // Final do arquivo
     }
 
 // Retorna o tipo de token encontrado

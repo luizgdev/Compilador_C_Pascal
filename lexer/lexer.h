@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "../utils/token_def/token_def.h"
 
 int is_space(char);
 
