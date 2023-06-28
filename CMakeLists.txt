@@ -3,4 +3,4 @@ project(Compilador_C_Pascal C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Compilador_C_Pascal main.c tests/test_lexer.pas tests/test_lexer_2.pas lexer/lexer.c lexer/lexer.h parser/parser.c parser/parser.h utils/symbol_table/symbol_table.c utils/symbol_table/symbol_table.h utils/symbol_table/symbol_table.c utils/token_def/token_def.h)
+add_executable(Compilador_C_Pascal main.c tests/test_lexer.pas tests/test_lexer_2.pas lexer/lexer.c lexer/lexer.h parser/parser.c parser/parser.h utils/symbol_table/symbol_table.c utils/symbol_table/symbol_table.h utils/symbol_table/symbol_table.c utils/token_def/token_def.h errors/errors_lexer/errors_lexer.h errors/errors_parser/errors_parser.h)
