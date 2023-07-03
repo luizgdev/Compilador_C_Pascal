@@ -17,7 +17,11 @@ void match(Token *, TokenType );
 
 void program(Token *);
 
-void statement();
+void var(Token *);
+
+void codeBlock(Token *);
+
+void statement(Token *);
 
 void expression();
 
@@ -26,5 +30,7 @@ void term();
 void factor();
 
 int programName(char *);
+
+int varName(char *);
 
 #endif //C_PASCAL_COMPILER_PARSER_H

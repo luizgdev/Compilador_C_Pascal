@@ -27,14 +27,102 @@ void program(Token *currentToken) {
     } else if (strcmp(currentToken->next->next->token, ";")) {
         //error
     }
-    // statement();
+    var(currentToken->next->next->next);
 }
 
-//void statement() {
-//    // Implemente aqui a lógica para a regra do statement
+void var(Token *currentToken) {
+    if (strcmp(currentToken->token, "var")) {
+        //error
+    } else {
+        while (strcmp(currentToken->next->token, "begin")) {
+            if (varName(currentToken->next->token)) {
+                //error
+            } else if (strcmp(currentToken->next->next->token, ":")) {
+                //error
+            } else if (strcmp(currentToken->next->next->next->token, "integer") ||
+                       strcmp(currentToken->next->next->next->token, "real") ||
+                       strcmp(currentToken->next->next->next->token, "boolean") ||
+                       strcmp(currentToken->next->next->next->token, "char") ||
+                       strcmp(currentToken->next->next->next->token, "string") ||
+                       strcmp(currentToken->next->next->next->token, "array")) {
+                //error
+            }
+            currentToken = currentToken->next->next->next->next;
+        }
+    }
+    codeBlock(currentToken->next);
+}
+
+void codeBlock(Token *currentToken) {
+    Token *aux = currentToken;
+
+    if (strcmp(aux->token, "begin")) {
+        //error
+    }
+    while (strcmp(aux->token, "end") && strcmp(aux->token, ".")) {
+        if (aux->next == NULL) {
+            //error
+        }
+        aux = aux->next;
+    }
+    statement(currentToken->next);
+}
+
+void statement(Token *currentToken) {
+    Token *aux = currentToken;
+
+    // Implemente aqui a lógica para a regra do statement
+    if (!strcmp(currentToken->token, "write") ||
+        !strcmp(currentToken->token, "writeln")) {
+        if (strcmp(currentToken->next->token, "(")) {
+            //error
+        }
+        while (strcmp(aux->token, ")")) {
+            if (aux->next == NULL) {
+                //error
+            }
+            aux = aux->next;
+        }
+        if (strcmp(currentToken->next->token, ";")) {
+            //error
+        }
+    }
+    currentToken = aux->next->next;
+    if (!strcmp(currentToken->token, "read") ||
+        !strcmp(currentToken->token, "readln")) {
+        if (strcmp(currentToken->next->token, "(")) {
+            //error
+        } else if (strcmp(currentToken->next->next->token, ")")) {
+            //error
+        } else if (strcmp(currentToken->next->next->next->token, ";")) {
+            //error
+        }
+    }
+    currentToken = currentToken->next->next->next->next->next;
+    if (!strcmp(currentToken->token, "if")) {
+        if (!(currentToken->next->token_type == TOK_IDENTIFIER ||
+              currentToken->next->token_type == TOK_NUM)) {
+            //error
+        } else if (currentToken->next->next->token_type != TOK_OP) {
+            //error
+        } else if (!(currentToken->next->next->next->token_type == TOK_IDENTIFIER ||
+                     currentToken->next->next->next->token_type == TOK_NUM)) {
+            //error
+        }
+    }
+    currentToken = currentToken->next->next->next->next->next;
+    if (!strcmp(currentToken->token, "begin")) {
+        aux = currentToken;
+        while ((strcmp(aux->token, "end") && strcmp(aux->token, ";")) || strcmp(aux->token, "end")) {
+            if (aux->next == NULL) {
+                //error
+            }
+            aux = aux->next;
+        }
+    }
 //    expression();
-//}
-//
+}
+
 //void expression() {
 //    // Implemente aqui a lógica para a regra da expressão
 //    term();
@@ -73,7 +161,21 @@ int programName(char *str) {
         //error
     } else {
         // Checa o resto dos caracteres
-        while (*str != '\0') {
+        while (*str++ != '\0') {
+            if (!(isalpha(*str) || isdigit(*str) || *str == '_')) {
+                //error
+            }
+        }
+    }
+    return 1;
+}
+
+int varName(char *str) {
+    if (!isalpha(str[0])) {
+        //error
+    } else {
+        // Checa o resto dos caracteres
+        while (*str++ != '\0') {
             if (!(isalpha(*str) || isdigit(*str) || *str == '_')) {
                 //error
             }

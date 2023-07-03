@@ -1,0 +1,3 @@
+/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/CMakeFiles/Compilador_C_Pascal.dir
+/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/CMakeFiles/rebuild_cache.dir

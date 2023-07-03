@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Compilador_C_Pascal"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Compilador_C_Pascal">
+				<Option output="/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Compilador_C_Pascal" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 Compilador_C_Pascal"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Compilador_C_Pascal/fast">
+				<Option output="/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Compilador_C_Pascal" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 Compilador_C_Pascal/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/luiz/Programação/GitHub/Compilador_C_Pascal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/errors/errors_lexer/errors_lexer.h">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/errors/errors_parser/errors_parser.h">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/lexer/lexer.c">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/lexer/lexer.h">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/main.c">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/parser/parser.c">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/parser/parser.h">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/tests/test_lexer.pas">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/tests/test_lexer_2.pas">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/utils/symbol_table/symbol_table.c">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/utils/symbol_table/symbol_table.h">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/utils/token_def/token_def.h">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
