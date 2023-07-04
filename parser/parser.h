@@ -6,6 +6,7 @@
 #include <string.h>
 #include <ctype.h>
 #include "../utils/token_def/token_def.h"
+#include "../errors/errors_parser/errors_parser.h"
 
 // Apelido para Node
 typedef struct TokenDef Token;
@@ -23,7 +24,7 @@ void codeBlock(Token *);
 
 void statement(Token *);
 
-void expression();
+void expression(Token *);
 
 void term();
 

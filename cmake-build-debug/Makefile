@@ -129,6 +129,30 @@ Compilador_C_Pascal/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compilador_C_Pascal.dir/build.make CMakeFiles/Compilador_C_Pascal.dir/build
 .PHONY : Compilador_C_Pascal/fast
 
+errors/errors_parser/errors_parser.o: errors/errors_parser/errors_parser.c.o
+.PHONY : errors/errors_parser/errors_parser.o
+
+# target to build an object file
+errors/errors_parser/errors_parser.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compilador_C_Pascal.dir/build.make CMakeFiles/Compilador_C_Pascal.dir/errors/errors_parser/errors_parser.c.o
+.PHONY : errors/errors_parser/errors_parser.c.o
+
+errors/errors_parser/errors_parser.i: errors/errors_parser/errors_parser.c.i
+.PHONY : errors/errors_parser/errors_parser.i
+
+# target to preprocess a source file
+errors/errors_parser/errors_parser.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compilador_C_Pascal.dir/build.make CMakeFiles/Compilador_C_Pascal.dir/errors/errors_parser/errors_parser.c.i
+.PHONY : errors/errors_parser/errors_parser.c.i
+
+errors/errors_parser/errors_parser.s: errors/errors_parser/errors_parser.c.s
+.PHONY : errors/errors_parser/errors_parser.s
+
+# target to generate assembly for a file
+errors/errors_parser/errors_parser.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Compilador_C_Pascal.dir/build.make CMakeFiles/Compilador_C_Pascal.dir/errors/errors_parser/errors_parser.c.s
+.PHONY : errors/errors_parser/errors_parser.c.s
+
 lexer/lexer.o: lexer/lexer.c.o
 .PHONY : lexer/lexer.o
 
@@ -234,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Compilador_C_Pascal"
+	@echo "... errors/errors_parser/errors_parser.o"
+	@echo "... errors/errors_parser/errors_parser.i"
+	@echo "... errors/errors_parser/errors_parser.s"
 	@echo "... lexer/lexer.o"
 	@echo "... lexer/lexer.i"
 	@echo "... lexer/lexer.s"

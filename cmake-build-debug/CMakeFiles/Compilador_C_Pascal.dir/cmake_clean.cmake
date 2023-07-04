@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Compilador_C_Pascal.dir/errors/errors_parser/errors_parser.c.o"
+  "CMakeFiles/Compilador_C_Pascal.dir/errors/errors_parser/errors_parser.c.o.d"
   "CMakeFiles/Compilador_C_Pascal.dir/lexer/lexer.c.o"
   "CMakeFiles/Compilador_C_Pascal.dir/lexer/lexer.c.o.d"
   "CMakeFiles/Compilador_C_Pascal.dir/main.c.o"

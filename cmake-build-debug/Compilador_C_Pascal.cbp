@@ -79,6 +79,9 @@
 		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/errors/errors_lexer/errors_lexer.h">
 			<Option target="Compilador_C_Pascal"/>
 		</Unit>
+		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/errors/errors_parser/errors_parser.c">
+			<Option target="Compilador_C_Pascal"/>
+		</Unit>
 		<Unit filename="/home/luiz/Programação/GitHub/Compilador_C_Pascal/errors/errors_parser/errors_parser.h">
 			<Option target="Compilador_C_Pascal"/>
 		</Unit>

@@ -1,7 +1,7 @@
-CMakeFiles/Compilador_C_Pascal.dir/main.c.o: \
- /home/luiz/Programação/GitHub/Compilador_C_Pascal/main.c \
+CMakeFiles/Compilador_C_Pascal.dir/errors/errors_parser/errors_parser.c.o: \
+ /home/luiz/Programação/GitHub/Compilador_C_Pascal/errors/errors_parser/errors_parser.c \
  /usr/include/stdc-predef.h \
- /home/luiz/Programação/GitHub/Compilador_C_Pascal/lexer/lexer.h \
+ /home/luiz/Programação/GitHub/Compilador_C_Pascal/errors/errors_parser/errors_parser.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -49,15 +49,4 @@ CMakeFiles/Compilador_C_Pascal.dir/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
- /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h \
- /home/luiz/Programação/GitHub/Compilador_C_Pascal/lexer/../utils/token_def/token_def.h \
- /home/luiz/Programação/GitHub/Compilador_C_Pascal/utils/symbol_table/symbol_table.h \
- /home/luiz/Programação/GitHub/Compilador_C_Pascal/utils/symbol_table/../token_def/token_def.h \
- /home/luiz/Programação/GitHub/Compilador_C_Pascal/parser/parser.h \
- /usr/include/ctype.h \
- /home/luiz/Programação/GitHub/Compilador_C_Pascal/parser/../utils/token_def/token_def.h \
- /home/luiz/Programação/GitHub/Compilador_C_Pascal/parser/../errors/errors_parser/errors_parser.h \
- /home/luiz/Programação/GitHub/Compilador_C_Pascal/utils/token_def/token_def.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h

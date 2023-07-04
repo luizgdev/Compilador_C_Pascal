@@ -53,4 +53,5 @@ CMakeFiles/Compilador_C_Pascal.dir/parser/parser.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h /usr/include/ctype.h \
- /home/luiz/Programação/GitHub/Compilador_C_Pascal/parser/../utils/token_def/token_def.h
+ /home/luiz/Programação/GitHub/Compilador_C_Pascal/parser/../utils/token_def/token_def.h \
+ /home/luiz/Programação/GitHub/Compilador_C_Pascal/parser/../errors/errors_parser/errors_parser.h
